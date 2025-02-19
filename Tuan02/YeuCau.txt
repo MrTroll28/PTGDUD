@@ -1,0 +1,5 @@
+1. input ---> name
+2. add two numbers
+3. + - * / ---> radio ---> click button
+4. Todo app ---> add, remove
+5. CSS
