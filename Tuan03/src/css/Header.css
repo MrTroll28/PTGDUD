@@ -1,0 +1,99 @@
+/* Header tổng thể */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 8px;
+}
+
+/* SearchBox */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    padding: 8px 15px;
+    width: 300px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.search-icon {
+    color: #888;
+    font-size: 18px;
+}
+
+/* Menu */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #e91e63;
+}
+
+/* User menu */
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.recipe-box-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #ffe3ed;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #e91e63;
+}
+
+.user-icon {
+    color: #e91e63;
+    font-size: 16px;
+}
+
+.recipe-box-btn:hover {
+    background-color: #ffc2da;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}

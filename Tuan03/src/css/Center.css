@@ -1,0 +1,165 @@
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 300px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* No results */
+.no-results {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.img-noItem {
+    margin-bottom: 15px;
+    width: 120px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.search-query {
+    color: #e91e63;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.suggested-tags {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Tag */
+.tag {
+    background-color: #f8d7da;
+    color: #e91e63;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #f4c2c7;
+}
+
+/* Filters Sidebar */
+.filters {
+    width: 280px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filters-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Time Filter */
+.time-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-filter input {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.time-filter p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Apply Button */
+.apply-btn {
+    width: 100%;
+    background: #e91e63;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.apply-btn:hover {
+    background: #d81b60;
+}
+
+/* Filter Section */
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.filter-content {
+    margin-top: 10px;
+}
+
+/* Rating Stars */
+.rating-stars {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.star-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stars {
+    color: #ffca28;
+    font-size: 18px;
+}
