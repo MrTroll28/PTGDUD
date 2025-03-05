@@ -2,7 +2,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 300px;
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -69,7 +68,7 @@ p {
 .filters {
     width: 280px;
     background: #fff;
-    padding: 0px 20px;
+    padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -77,6 +76,7 @@ p {
 .filters-title {
     font-size: 18px;
     font-weight: bold;
+    margin: 0px
 }
 
 .filter-options {
@@ -96,6 +96,7 @@ p {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
+    padding: 0px 40px;
 }
 
 /* Apply Button */

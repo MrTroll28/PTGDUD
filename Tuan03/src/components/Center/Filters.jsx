@@ -5,7 +5,7 @@ import Slider from '@mui/material/Slider';
 
 const Filters = () => {
     const [selectedTypes, setSelectedTypes] = useState(["Grilled", "Roasted"]);
-    const [value, setValue] = useState([20, 37]);
+    const [value, setValue] = useState([20, 40]);
     const [selectedRatings, setSelectedRatings] = useState([3, 4, 5]);
 
     const handleSliderChange = (event, newValue) => {
