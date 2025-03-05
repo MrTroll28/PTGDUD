@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import FilterSection from "../../components/Center/Filters/FilterSection";
 import RatingStars from "../../components/Center/Filters/RatingStar";
+import Slider from '@mui/material/Slider';
 
 const Filters = () => {
     const [selectedTypes, setSelectedTypes] = useState(["Grilled", "Roasted"]);
-    const [timeRange, setTimeRange] = useState([30, 50]);
+    const [value, setValue] = useState([20, 37]);
     const [selectedRatings, setSelectedRatings] = useState([3, 4, 5]);
+
+    const handleSliderChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    const valuetext = (value) => {
+        return `${value} min`;
+    };
 
     return (
         <div className="filters">
@@ -35,22 +44,18 @@ const Filters = () => {
 
             {/* Bộ lọc thời gian */}
             <FilterSection title="Time">
-                <div className="time-filter">
-                    <input
-                        type="range"
-                        min="10"
-                        max="120"
-                        value={timeRange[0]}
-                        onChange={(e) => setTimeRange([Number(e.target.value), timeRange[1]])}
-                    />
-                    <input
-                        type="range"
-                        min="10"
-                        max="120"
-                        value={timeRange[1]}
-                        onChange={(e) => setTimeRange([timeRange[0], Number(e.target.value)])}
-                    />
-                    <p>{timeRange[0]} minutes - {timeRange[1]} minutes</p>
+                <Slider
+                    getAriaLabel={() => 'Time range'}
+                    value={value}
+                    onChange={handleSliderChange}
+                    valueLabelDisplay="auto"
+                    getAriaValueText={valuetext}
+                    min={0}
+                    max={60}
+                />
+                <div className="time-range">
+                    <span>{value[0]} min</span>
+                    <span>{value[1]} min</span>
                 </div>
             </FilterSection>
 

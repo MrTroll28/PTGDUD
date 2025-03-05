@@ -69,7 +69,7 @@ p {
 .filters {
     width: 280px;
     background: #fff;
-    padding: 20px;
+    padding: 0px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -77,13 +77,12 @@ p {
 .filters-title {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 15px;
 }
 
 .filter-options {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 .checkbox-label {
@@ -93,20 +92,10 @@ p {
 }
 
 /* Time Filter */
-.time-filter {
+.time-range {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.time-filter input {
-    width: 100%;
-    margin: 5px 0;
-}
-
-.time-filter p {
-    font-size: 14px;
-    color: #666;
+    justify-content: space-between;
+    margin-top: 5px;
 }
 
 /* Apply Button */
@@ -137,13 +126,8 @@ p {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    padding: 8px 0;
     font-size: 16px;
     font-weight: bold;
-}
-
-.filter-content {
-    margin-top: 10px;
 }
 
 /* Rating Stars */

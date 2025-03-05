@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const NavMenu = () => {
-    const menuItems = ["What to cook", "Recipes", "Ingredients", "Occasions", "About Us"];
+    
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        fetch("https://67c81790c19eb8753e7c341f.mockapi.io/Menu")
+            .then((res) => res.json())
+            .then((data) => {
+                setItems(data);
+            }, []);
+    });
     
     return (
         <nav className="nav-menu">
-            {menuItems.map((item, index) => (
-                <a key={index} href="#">{item}</a>
+            {items.map((item, index) => (
+                <a key={index} href="#">{item.item}</a>
             ))}
         </nav>
     );

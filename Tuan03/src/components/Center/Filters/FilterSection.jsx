@@ -5,12 +5,12 @@ const FilterSection = ({ title, children }) => {
     const [isOpen, setIsOpen] = useState(true);
 
     return (
-        <div className="filter-section">
+        <div>
             <div className="filter-header" onClick={() => setIsOpen(!isOpen)}>
                 <h4>{title}</h4>
                 {isOpen ? <FaChevronUp /> : <FaChevronDown />}
             </div>
-            {isOpen && <div className="filter-content">{children}</div>}
+            {isOpen && <div>{children}</div>}
         </div>
     );
 };
