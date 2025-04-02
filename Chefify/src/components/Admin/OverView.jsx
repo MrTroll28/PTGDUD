@@ -4,8 +4,18 @@ import Avatar from "../../assets/Lab_05/Avatar (1).png";
 import Bell from "../../assets/Lab_05/Bell 1.png";
 import Search from "../../assets/Lab_05/Search.png";
 import Square4 from "../../assets/Lab_05/Squares four 1.png";
+import { useEffect, useState } from "react";
 
 const OverView = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch("https://67c81790c19eb8753e7c341f.mockapi.io/overview")
+            .then((response) => response.json())
+            .then((data) => setData(data))
+            .catch((error) => console.error("Error fetching data:", error));
+    }, []);
+    
 
     return (
         <div>
@@ -32,9 +42,9 @@ const OverView = () => {
                 <h2 className="font-bold text-[20px]">Overview</h2>
             </div>
             <div className="grid grid-cols-3 gap-4 mt-6">
-                <OverViewCard title="Turnover" amount="$92,405" />
-                <OverViewCard title="Orders" amount="1,250" />
-                <OverViewCard title="Customers" amount="320" />
+                {data.map((item) => (
+                    <OverViewCard key={item.id} title={item.title} amount={item.amount} change={item.change} isIncrese={item.isIncrese} color={item.color} img={item.img}/>
+                ))}
             </div>
         </div>
     );
