@@ -43,7 +43,7 @@ const OverView = () => {
             </div>
             <div className="grid grid-cols-3 gap-4 mt-6">
                 {data.map((item) => (
-                    <OverViewCard key={item.id} title={item.title} amount={item.amount} change={item.change} isIncrese={item.isIncrese} color={item.color} img={item.img}/>
+                    <OverViewCard key={item.id} title={item.title} amount={item.amount} change={item.change} isIncrese={item.isIncrese} color={item.color} buttonValue={item.img}/>
                 ))}
             </div>
         </div>
