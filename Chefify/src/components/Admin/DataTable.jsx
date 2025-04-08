@@ -1,8 +1,9 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import create from "../../assets/Lab_05/create.png";
+import EditModal from "./EditModal";
 
-const columns = [
+const columns = (handleEditClick) => [
     { field: "id", headerName: "ID", width: 90 },
     { field: "name", headerName: "CUSTOMER NAME", width: 200 },
     { field: "company", headerName: "COMPANY", width: 200 },
@@ -35,7 +36,7 @@ const columns = [
         renderCell: (params) => (
             <button
                 className="h-full w-full"
-                onClick={() => alert("Thêm sau này")}
+                onClick={() => handleEditClick(params.row)}
             >
                 <img src={create} alt="create" className="w-5 h-5 hover:scale-120" />
             </button>
@@ -45,6 +46,8 @@ const columns = [
 
 const DataTable = () => {
     const [data, setData] = useState([]);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedRow, setSelectedRow] = useState(null);
 
     useEffect(() => {
         fetch("https://67c81790c19eb8753e7c341f.mockapi.io/dataTable")
@@ -53,9 +56,30 @@ const DataTable = () => {
             .catch((error) => console.error("Error fetching data:", error));
     }, []);
 
+    const handleEditClick = (row) => {
+        setSelectedRow(row);
+        setModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setModalOpen(false);
+        setSelectedRow(null);
+    };
+
+    const handleSave = () => {
+        alert("Lưu thay đổi sau này");
+        handleCloseModal();
+    };
+
     return (
         <div style={{ height: 400, width: "100%" }}>
-            <DataGrid rows={data} columns={columns} pageSize={5} checkboxSelection />
+            <DataGrid rows={data} columns={columns(handleEditClick)} pageSize={5} checkboxSelection />
+            <EditModal
+                isOpen={modalOpen}
+                onClose={handleCloseModal}
+                rowData={selectedRow}
+                onSave={handleSave}
+            />
         </div>
     );
 };
