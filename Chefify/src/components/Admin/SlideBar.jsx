@@ -11,8 +11,7 @@ import Integrations from "../../assets/Lab_05/Code.png";
 const menuItems = [
     { name: "Dashboard", icon: Square, link: "/" },
     { name: "Projects", icon: Folder, link: "/project" },
-    { name: "Settings", icon: Square, link: "/settings" },
-    { name: "Profile", icon: Groups, link: "/profile" },
+    { name: "Team", icon: Groups, link: "/team" },
     { name: "Analytics", icon: Analytics, link: "/analytics" },
     { name: "Messages", icon: Messages, link: "/messages" },
     { name: "Integrations", icon: Integrations, link: "/integrations" },
