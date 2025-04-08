@@ -13,10 +13,11 @@ const Admin = () => {
         <div className="mt-6">
           <Routes>
             <Route path="/" element={<DataTable />} />
-            <Route path="/project" element={<PageData name="Project" />} />
-            <Route path="/dashboard" element={<PageData name="Dashboard" />} />
-            <Route path="/settings" element={<PageData name="Setting" />} />
-            <Route path="/profile" element={<PageData name="Profile" />} />
+            <Route path="/project" element={<PageData name="Projects" />} />
+            <Route path="/team" element={<PageData name="Teams" />} />
+            <Route path="/analytics" element={<PageData name="Analytics" />} />
+            <Route path="/messages" element={<PageData name="Messages" />} />
+            <Route path="/integrations" element={<PageData name="Integrations" />} />
           </Routes>
         </div>
       </div>
